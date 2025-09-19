@@ -1,1 +1,1 @@
-Espelho de hemograma
+Espelho de laudo de hemograma para caninos e felinos.
