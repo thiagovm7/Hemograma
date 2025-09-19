@@ -1,0 +1,42 @@
+body {
+    background-color: azure;
+    font-size: medium;
+    justify-content: center;
+    align-items: left;
+
+}
+#cabecalho {
+    background-color: rgb(36, 97, 97);
+    padding: 20px;
+    text-align: left;
+    color: bisque;
+    border-radius: 10px;
+}
+
+#eritrograma {
+    background-image: linear-gradient(to right, rgb(28, 121, 241), rgb(165, 194, 218) );
+    padding: 20px;
+    text-align: left;
+    color:bisque;
+    border-radius: 10px;
+
+}
+
+#leucograma {
+    background-color: rgb(24, 135, 179);
+    color: bisque;
+    padding: 20px;
+    text-align: left;
+    border-radius: 10px;
+    
+}
+
+#diferencial {
+    background-color: rgb(152, 205, 216);
+    color: rgb(12, 91, 219);
+    padding: 20px;
+    text-align: left;
+    border-radius: 10px;
+    
+
+}

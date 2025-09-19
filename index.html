@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ficha de dados</title>
+</head>
+
+<body>
+    <!--Dados do animal e veterinário-->
+<section>
+    <div id="cabecalho">
+   <form action="">
+    <h1 id= 'hemograma' style="text-align: center;"></h1><br>
+    <b>Animal:</b>  <input type="text" name="animal" size="40">
+    <b>Espécie:</b> <input type="radio" name="especie" value="felina">Felina
+                    <input type="radio" name="especie" value="canina">Canina
+    
+    <b>Sexo:</b>    <input type="radio" name="sexo" valeu="femea">Fêmea
+                    <input type="radio" name="sexo" value="macho">Macho
+    
+    <b>Idade:</b>   <select name="idade">
+                        <option value="f_0-6m">Felino de 0-6 meses
+                        <option value="f_>7m">Felino acima de 6 meses
+                        <option value="c_0-3m">Canino até 3 meses
+                        <option value="c_3-6m">Canino de 3 a 6 meses
+                        <option value="c_6-12m">Canino de 6 a 12 meses
+                        <option value="c_1-8a">Canino de 1 a 8 anos
+                        <option value="c_>8a">Canino acima de 8 anos
+                    </select><br><br>
+
+    <b>Tutor:</b>               <input type="text" name="tutor" size="40"><br><br>
+    <b>Solicitante: Dr(a)</b>   <input type="text" name="solicitante" size="40"><br><br>
+    <b>Clínica</b>              <input type="text" name="clinica" size="30">
+    <b>Data:</b>                <input type="date" name="data">
+
+   </form>
+   </div>
+  </section>
+<br>
+<!--Dados do eritrograma-->
+<section id="eritrograma">
+    <div id='corpoEritrograma'></div>
+
+        <form id="formEritrograma">
+
+    <div class="hm">    <label for="hemacias">Hemácias:</label>         <input type="number" step="0.01" id="hemacia" size="5"><br>     </div>
+    <div class="hb">    <label for="hemoglobina">Hemoglobina:</label>   <input type="number" step="0.1" id="hemoglobina" size="5"><br>  </div>
+    <div class="ht">    <label for="hematocrito">Hematócrito:</label>   <input type="number" step="0.1" id="hematocrito" size="5"><br>  </div>
+    
+    <div class="VCM">   <label for="VCM"></label>    <input type="number" id="VCM" size="5" readonly>    </div>
+    <div class="CHCM">  <label for="CHCM"></label>  <input type="number" id="CHCM" size="5" readonly>   </div>
+        
+    <button type="button" onClick= 'eritrograma()'>Calcular</button>
+        
+        </form>
+               
+    </div>
+</section>
+<br>
+
+<!--Dados do leucograma-->
+<section id="leucograma">
+    <div>
+        <label for="leucocitos">Leucócitos</label>
+        <input type="number" id="leucocitos"><br>
+    </div>
+</section>
+<br>
+<section id="diferencial">
+    <div><b>
+        <label for="diferencial">Contagem diferencial</label></b><br><br>
+        <label for="eosinofilos">Eosinófilos</label>
+        <input type="number" id="eosinófilos"><br>
+        <label for="basolifos">Basófilos</label>
+        <input type="number" id="basofilos"><br>
+        <label for="bastonetes">Bastonetes</label>
+        <input type="number" id="bastonetes"><br>
+        <label for="neutrofilos">Neutrófilos</label>
+        <input type="number" id="neutrofilo"><br>
+        <label for="linfocitos">Linfócitos</label>
+        <input type="number" id="linfocitos"><br>
+        <label for="monocitos">Monócitos</label>
+        <input type="number" id="monocitos"><br>
+    </div>
+</section>
+<br>
+
+<script>
+document.getElementById('hemograma').textContent = 'HEMOGRAMA'
+    let hemacias = document.getElementById('hemacia').value
+
+    let hemoglobina = document.getElementById('hemoglobina').value
+    let hematocrito = document.getElementById('hematocrito').value
+
+function eritrograma(){
+    let VCM = ((hematocrito*10)/hemacias);
+    document.getElementById('VCM').textContent = 'VCM:' + VCM
+    let CHCM = ((hemoglobina*100)/hematocrito);
+    document.getElementById('CHCM').textContent = 'CHCM:' + CHCM
+}
+
+</script>
+
+</body>
+
+</html>
